@@ -96,11 +96,12 @@ button:hover {
 }
 
 .delivery__button-wrapper {
-    gap: 8px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
 }
+
+.delivery__button-wrapper a:not(:last-of-type) {margin-right: 8px;}
 
 .delivery__text {
     max-width: 690px;
@@ -120,7 +121,7 @@ button:hover {
     font-size: 13px;
     line-height: 120%;
     margin-top: 40px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .delivery__chat {
@@ -133,6 +134,7 @@ button:hover {
     background-position: 26%;
     background-repeat: no-repeat;
     border-radius: 12px;
+    margin-top: 8px;
 }
 
 .delivery__social {
@@ -142,6 +144,7 @@ button:hover {
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 12px;
+    margin-top: 8px;
 }
 
 .delivery__social_tel {
@@ -206,7 +209,6 @@ button:hover {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 8px;
     -ms-flex-line-pack: center;
         align-content: center;
     -webkit-box-pack: center;
@@ -234,6 +236,8 @@ button:hover {
         -ms-flex-pack: center;
             justify-content: center;
 }
+
+.header__social:not(:last-of-type) {margin-right: 8px;}
 
 .header__social img {
     padding-right: 8px;
@@ -284,7 +288,6 @@ button:hover {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 14px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -298,6 +301,8 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.social__link:not(:last-of-type) {margin-right: 14px;}
 
 .social__link_vk {
     background-image: url(img/vk.svg);
@@ -332,11 +337,11 @@ button:hover {
     max-width: 1200px;
     display: -ms-grid;
     display: grid;
+    gap: 24px;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     -ms-grid-columns: 282px 24px 282px 24px 282px 24px 282px;
     grid-template-columns: repeat(4, 282px);
-    gap: 24px;
 }
 
 .faq-slider__slider > *:nth-child(1) {
@@ -371,6 +376,8 @@ button:hover {
     padding: 16px;
     display: none;
 }
+
+.faq-slider__item:nth-child(-n+4) {margin-right: 24px;}
 
 .show {display: block;}
 
@@ -445,7 +452,6 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 12px;
     margin: 32px auto 0;
 }
 
@@ -460,6 +466,8 @@ button:hover {
     padding: 20px 24px;
 }
 
+.help__item:not(:last-of-type) {margin-bottom: 12px;}
+
 .help__text {
     max-width: 400px;
     font-weight: normal;
@@ -469,7 +477,7 @@ button:hover {
     padding-top: 4px;
 }
 
-@media (max-width: 746px) {
+@media (max-width: 870px) {
     .social {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -486,9 +494,14 @@ button:hover {
     .social__subtitle {
         text-align: center;
     }
+
+    .social__link {margin-top: 8px;}
+
+    .faq-slider__slider-button {right: 0;}
 }
 
 @media (max-width: 730px) {
+    .header__social {margin-top: 8px;}
     .delivery {
         padding-right: 20px;
         padding-bottom: 60px;
@@ -523,4 +536,10 @@ button:hover {
             -ms-flex-align: start;
                 align-items: start;
     }
+}
+
+@media (max-width: 346px) {
+    .header__social:not(:last-of-type) {margin-right: 0;}
+    .social__link:nth-child(3) {margin-right: 0;}
+    .faq-slider__wrapper {margin-left: -10px;}
 }
